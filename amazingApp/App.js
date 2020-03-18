@@ -10,7 +10,7 @@ class App extends React.Component{
 
     return (
     <View style={styles.container}>
-      <Text>Hello</Text>
+      <Text style={{fontSize:30,backgroundColor:'red'}} >Hello</Text>
 
     </View>
     );
@@ -24,7 +24,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    flexDirection : 'column',
     alignItems: 'center',
     justifyContent: 'center',
-  },
+    backgroundColor:"yellow"
+  }
 });

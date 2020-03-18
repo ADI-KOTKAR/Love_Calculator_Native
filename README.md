@@ -58,3 +58,28 @@
             }
             
             }
+
+# Flexbox
+
+- Example:
+        const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            backgroundColor: '#fff',
+            flexDirection : 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor:"yellow"
+        },
+        text:{
+            flex:1,
+            fontSize:30,
+            height:80,
+            width:80,
+            borderWidth:3,
+            backgroundColor:"red",
+            marginTop:10
+        }
+        });
+
+- https://reactnative.dev/docs/0.5/flexbox
