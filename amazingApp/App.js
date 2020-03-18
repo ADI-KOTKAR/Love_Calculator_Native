@@ -1,13 +1,29 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button,Alert } from 'react-native';
 
-export default function App() {
-  return (
+class App extends React.Component{
+
+   
+  
+  render(){
+
+    const diap = ['eat','sleep','code','repeat']
+    const list = diap.map(data=>{
+        return <Text> {data}</Text>
+      })
+    return (
     <View style={styles.container}>
-      <Text>Hello World</Text>
+      <Text> {Math.random()} </Text>
+      {list}
+      
+      <Button title="submit" />
     </View>
-  );
+    );
+  }
+  
 }
+
+export default App;
 
 const styles = StyleSheet.create({
   container: {
