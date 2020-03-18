@@ -30,29 +30,31 @@
 
 # States :
 
-class App extends React.Component{
+- Example:
+                    
+            class App extends React.Component{
 
-   state = {
-    name:"mukesh",
-    status:"coder"
-  }
+            state = {
+                name:"mukesh",
+                status:"coder"
+            }
 
-  stateHandler(name){
-      this.setState({
-        name: name
-      })
-      
-  } 
-  
-  render(){
-    console.log("updated",this.state)
-    return (
-    <View style={styles.container}>
-      <Text>{this.state.name}</Text>
-        <Text>{this.state.status}</Text>
-      <Button title="Click Me!" onPress={this.stateHandler.bind(this,"ramesh")}/>
-    </View>
-    );
-  }
-  
-}
+            stateHandler(name){
+                this.setState({
+                    name: name
+                })
+                
+            } 
+            
+            render(){
+                console.log("updated",this.state)
+                return (
+                <View style={styles.container}>
+                <Text>{this.state.name}</Text>
+                    <Text>{this.state.status}</Text>
+                <Button title="Click Me!" onPress={this.stateHandler.bind(this,"ramesh")}/>
+                </View>
+                );
+            }
+            
+            }
