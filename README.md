@@ -17,7 +17,7 @@
         }
 
 
-    - Function based
+    - Function based (recommended)
         
         class MyData extends React.Component{
             render(){
