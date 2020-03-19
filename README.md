@@ -84,3 +84,23 @@
         });
 
 - https://reactnative.dev/docs/0.5/flexbox
+
+# Fetch Data
+
+- Example: 
+
+        state={
+            text:"loading"
+        }
+
+        componentDidMount(){
+            fetch("https://jsonplaceholder.typicode.com/users")
+            .then(data=>data.json())
+            .then(data2=>{
+            console.log(data2);
+            this.setState({
+                text:data2[9].name
+            })
+            
+            })
+        }

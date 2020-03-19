@@ -7,22 +7,27 @@ class App extends React.Component{
    state={
      text:"loading"
    }
+
+   componentDidMount(){
+     fetch("https://jsonplaceholder.typicode.com/users")
+     .then(data=>data.json())
+     .then(data2=>{
+       console.log(data2);
+       this.setState({
+         text:data2[9].name
+       })
+       
+     })
+   }
   
   render(){
-
+    console.log("from render");
+    
     return (
     <View style={styles.container}>
       
-      <ScrollView>
-        <Image source={{uri:"https://images.unsplash.com/photo-1558980395-be8a5fcb4251?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",height:400,width:300}}/>
-        <Image source={{uri:"https://images.unsplash.com/photo-1558980395-be8a5fcb4251?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",height:400,width:300}}/>
-        <Image source={{uri:"https://images.unsplash.com/photo-1558980395-be8a5fcb4251?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",height:400,width:300}}/>
-        <Image source={{uri:"https://images.unsplash.com/photo-1558980395-be8a5fcb4251?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",height:400,width:300}}/>
-        <Image source={{uri:"https://images.unsplash.com/photo-1558980395-be8a5fcb4251?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",height:400,width:300}}/>
-        <Image source={{uri:"https://images.unsplash.com/photo-1558980395-be8a5fcb4251?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",height:400,width:300}}/>
-
-      </ScrollView>
       <Text style={{fontSize:30}} >Hello</Text>
+      <Text style={{fontSize:30}}>{this.state.text}</Text>
     </View>
     );
   }
