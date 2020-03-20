@@ -1,9 +1,13 @@
 {
   "expo": {
-    "name": "Blank Template",
+    "name": "LoveCalci",
     "slug": "amazingApp",
     "privacy": "public",
     "sdkVersion": "36.0.0",
+    "android": {
+      "package": "com.adis.LoveCalci",
+      "versionCode": 1
+    },
     "platforms": [
       "ios",
       "android",

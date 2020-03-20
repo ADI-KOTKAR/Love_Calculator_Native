@@ -104,3 +104,8 @@
             
             })
         }
+
+
+# React-Native-Paper
+
+- "npm install react-native-paper"
